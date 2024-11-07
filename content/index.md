@@ -3,7 +3,7 @@ Title: Home
 Description: This is our index page.
 ---
 
-Home page
+Signes portfolio
 ==========================
 
 The source for this page is in `content/index.md`.
