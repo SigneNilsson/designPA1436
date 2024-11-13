@@ -1,0 +1,30 @@
+
+.header {
+    display: flex;
+    background-color: lightblue;
+    flex-direction: row; //horisontellt
+    justify-content: space-between; //flyter ut elementen åt sidorna.
+    align-items: center; //vertikalled
+    padding: 2rem;
+}
+
+.site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a {
+    font-size: 2rem;
+
+}
+
+.title, .logo {
+    padding: 3em 3em 3em 0;
+    max-width: 200px;
+
+    img {
+        width:200px;
+    }
+}
+
