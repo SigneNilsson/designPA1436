@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /*!
  * Font Awesome Free 5.15.4 by @fontawesome - https://fontawesome.com
@@ -6427,13 +6428,19 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
+p {
+  font-size: 1em;
+  margin-bottom: 1.96rem;
+}
+
 html, body {
   height: 100%;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: [first] 20% [second] auto [third] 20% [end];
+  grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row-end];
 }
 
 .main {
@@ -6441,24 +6448,32 @@ body {
   width: 100%;
   padding: 2rem;
   margin: 0 auto;
-  max-width: 64rem;
+  max-width: 66rem;
 }
 
 .main {
-  flex: 1 0 auto;
+  grid-column: second/third;
+  grid-row: row2-start/row3-start;
+}
+
+/* .main {
+    flex: 1 0 auto;
 }
 
 .header, .footer {
-  flex: 0 0 auto;
-}
-
+    flex: 0 0 auto;
+} */
 .footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  /*     display: flex;
+      flex-direction: row; //horisontellt
+      justify-content: space-between; //flyter ut elementen åt sidorna.
+      align-items: center; //vertikalled */
   background-color: lightpink;
   padding: 2rem;
+}
+.footer .social {
+  grid-column: third/end;
+  grid-row: row1-start/row-end;
 }
 .footer .social a {
   text-decoration: none;
@@ -6466,24 +6481,54 @@ body {
   color: white;
 }
 
+.footertext {
+  grid-column: first/second;
+  grid-row: row1-start/row-end;
+}
+
+.footer {
+  grid-column: first/end;
+  grid-row: row3-start/row-end;
+  display: grid;
+  grid-template-columns: [first] 20% [second] auto [third] 15% [end];
+  grid-template-rows: [row1-start] auto [row-end];
+}
+
 .header {
-  display: flex;
+  /*     display: flex; */
   background-color: lightblue;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+  /*     flex-direction: row; //horisontellt */
+  /*     justify-content: space-between; //flyter ut elementen åt sidorna.
+      align-items: center; //vertikalled */
   padding: 2rem;
 }
 
-.site-header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
+.header {
+  grid-column: first/end;
+  grid-row: row1-start/row2-start;
+  display: grid;
+  grid-template-columns: [first] 40% [second] auto [third] 15% [end];
+  grid-template-rows: [row1-start] auto [row-end];
 }
 
+.site-header {
+  grid-column: first/second;
+  grid-row: row1-start/row-end;
+}
+
+/* .site-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
 .nav a {
   font-size: 2rem;
+}
+
+.nav {
+  grid-column: second/end;
+  grid-row: row1-start/row-end;
 }
 
 .title, .logo {
@@ -6491,9 +6536,17 @@ body {
   max-width: 200px;
 }
 .title img, .logo img {
+  float: left;
   width: 200px;
 }
 
+.title {
+  grid-column: second/third;
+  grid-row: row1-start/row-end;
+  float: right;
+}
+
+/* */
 blockquote {
   font-style: italic;
   margin-left: 1em;
@@ -6579,6 +6632,153 @@ pre code {
     line-height: 2em;
     text-align: center;
     cursor: pointer;
+  }
+}
+.landing-page {
+  display: grid;
+  gap: 4%;
+  margin-bottom: 1.96rem;
+  grid-template-columns: [first] 31% [second] 30% [third] 31% [end];
+  grid-template-rows: [row1-start] 17% [row2-start] 17% [row3-start] 17% [row4-start] 17% [row5-start] 17% [row-end];
+  box-sizing: border-box;
+}
+
+.landingtitle {
+  grid-column: first/end;
+  grid-row: row1-start/row2-start;
+  text-align: center;
+}
+
+/* .box { 
+    border: 1px solid lightsalmon; 
+    padding: 1.96rem;
+} */
+.boxcss:hover, .boxhtml:hover, .boxjavascript:hover, .boxphp:hover, .boxpython:hover, .boxgit:hover, .boxsqlite:hover {
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+}
+
+.boxcss {
+  grid-column: first/second;
+  grid-row: row2-start/row3-start;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxhtml {
+  grid-column: second/end;
+  grid-row: row2-start/row3-start;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxjavascript {
+  grid-column: first/third;
+  grid-row: row3-start/row4-start;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxphp {
+  grid-column: third/end;
+  grid-row: row3-start/row4-start;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxpython {
+  grid-column: first/end;
+  grid-row: row4-start/row5-start;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxgit {
+  grid-column: first/second;
+  grid-row: row5-start/row-end;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.boxsqlite {
+  grid-column: second/end;
+  grid-row: row5-start/row-end;
+  border: 1px solid lightsalmon;
+  padding: 1.96rem;
+}
+
+.technology {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.technology .article {
+  width: 60%;
+}
+
+.technology .menu {
+  width: 30%;
+}
+
+@media (max-width: 767px) {
+  .technology {
+    flex-direction: column;
+  }
+  .technology .article {
+    order: -1;
+  }
+}
+@media (max-width: 941px) {
+  .landing-page {
+    grid-template-columns: [first] 82% [second];
+    grid-template-rows: repeat(10, 1fr);
+  }
+  .landingtitle {
+    grid-column: first/second;
+    grid-row: 1/2;
+  }
+  .boxcss {
+    grid-column: first/second;
+    grid-row: 2/3;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxhtml {
+    grid-column: first/second;
+    grid-row: 3/4;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxjavascript {
+    grid-column: first/second;
+    grid-row: 4/5;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxphp {
+    grid-column: first/second;
+    grid-row: 5/6;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxpython {
+    grid-column: first/second;
+    grid-row: 6/7;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxgit {
+    grid-column: first/second;
+    grid-row: 7/8;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
+  }
+  .boxsqlite {
+    grid-column: first/second;
+    grid-row: 8/9;
+    border: 1px solid lightsalmon;
+    padding: 1.96rem;
   }
 }
 body {

@@ -3,8 +3,9 @@ html, body {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: [first] 20% [second] auto [third] 20% [end];
+    grid-template-rows: [row1-start] auto [row2-start] auto [row3-start] auto [row-end];
 }
 
 .main {
@@ -12,13 +13,18 @@ body {
     width: 100%;
     padding: 2rem;
     margin: 0 auto; //centrerar containern
-    max-width: 64rem;
+    max-width: 66rem;
 }
 
 .main {
+    grid-column: second / third; //börjar på second slutar på third
+    grid-row: row2-start / row3-start;
+}
+
+/* .main {
     flex: 1 0 auto;
 }
 
 .header, .footer {
     flex: 0 0 auto;
-}
+} */

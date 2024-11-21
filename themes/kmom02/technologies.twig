@@ -1,0 +1,25 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class = "landing-page">
+            {{ content }}
+
+            {#{{ dump(meta) }} Såhär kan man dumpa innehållet på sidan#}
+
+            {% for tech in meta.Techs %}
+                <a class = "box{{tech.class}}" href="{{ base_url }}/technology/{{ tech.class }}">
+                    <div>
+                        <h1>{{ tech.name }}</h1>
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+    
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

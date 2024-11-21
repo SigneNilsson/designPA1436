@@ -18,6 +18,8 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'code';
 @import 'mobile-menu'; //gjort själv.. hoppas rätt.
 
+@import 'technology';
+
 body {
     background-color: $background-color;
 }
