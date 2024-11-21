@@ -1,158 +1,166 @@
 .landing-page { //landing page är förälder till alla boxar.
-    display: grid;
-    gap: 4%;
-    margin-bottom: 1.96rem;
-    grid-template-columns: [first] 31% [second] 30% [third] 31% [end];
-    grid-template-rows: [row1-start] 17% [row2-start] 17% [row3-start] 17% [row4-start] 17% [row5-start] 17% [row-end];
-    box-sizing: border-box;
-    //justify-self: center;
+  display: grid;
+  gap: 4%;
+  margin-bottom: 1.96rem;
+  grid-template-columns: [first] 31% [second] 30% [third] 31% [end];
+  grid-template-rows: [row1-start] 17% [row2-start] 17% [row3-start] 17% [row4-start] 17% [row5-start] 17% [row-end];
+  box-sizing: border-box;
+  //justify-self: center;
 }
 
 .landingtitle {
-    grid-column: first / end;
-    grid-row: row1-start / row2-start;
-    //justify-self: center;
-    text-align: center;
+  grid-column: first / end;
+  grid-row: row1-start / row2-start;
+  //justify-self: center;
+  text-align: center;
 }
 
 /* .box { 
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  border: 1px solid lightsalmon; 
+  padding: 1.96rem;
 } */
 
-.boxcss:hover, .boxhtml:hover, .boxjavascript:hover, .boxphp:hover, .boxpython:hover, .boxgit:hover, .boxsqlite:hover  {
-    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.2);
+.boxcss:hover,
+.boxhtml:hover,
+.boxjavascript:hover,
+.boxphp:hover,
+.boxpython:hover,
+.boxgit:hover,
+.boxsqlite:hover {
+  box-shadow: 10px 10px 5px #0003;
 }
 
 .boxcss {
-    grid-column: first / second;
-    grid-row: row2-start / row3-start;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: first / second;
+  grid-row: row2-start / row3-start;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxhtml {
-    grid-column: second / end;
-    grid-row: row2-start / row3-start;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: second / end;
+  grid-row: row2-start / row3-start;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxjavascript {
-    grid-column: first / third;
-    grid-row: row3-start / row4-start;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: first / third;
+  grid-row: row3-start / row4-start;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxphp {
-    grid-column: third / end;
-    grid-row: row3-start / row4-start;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: third / end;
+  grid-row: row3-start / row4-start;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxpython {
-    grid-column: first / end;
-    grid-row: row4-start / row5-start;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: first / end;
+  grid-row: row4-start / row5-start;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxgit {
-    grid-column: first / second;
-    grid-row: row5-start / row-end;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: first / second;
+  grid-row: row5-start / row-end;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .boxsqlite {
-    grid-column: second / end;
-    grid-row: row5-start / row-end;
-    border: 1px solid lightsalmon; 
-    padding: 1.96rem;
+  grid-column: second / end;
+  grid-row: row5-start / row-end;
+  border: 1px solid #ffa07a;
+  padding: 1.96rem;
 }
 
 .technology {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: start;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: start;
 }
 
 .technology .article {
-    width: 60%;
+  width: 60%;
 }
+
 .technology .menu {
-    width: 30%;
+  width: 30%;
 }
 
 @media (max-width: 767px) {
-    .technology {
-        flex-direction: column;
-    }
-    .technology .article {
-        order: -1;
-    }
+  .technology {
+    flex-direction: column;
+  }
+
+  .technology .article {
+    order: -1;
+  }
 }
 
 @media (max-width: 941px) {
-    .landing-page {
-        grid-template-columns: [first] 82% [second];
-        grid-template-rows: repeat(10,1fr);
-    }
+  .landing-page {
+    grid-template-columns: [first] 82% [second];
+    grid-template-rows: repeat (10,1fr);
+  }
 
-    .landingtitle {
+  .landingtitle {
     grid-column: first / second;
-    grid-row: 1 / 2 ;
-    }
-    .boxcss {
-        grid-column: first / second;
-        grid-row: 2 / 3;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxhtml {
-        grid-column: first / second;
-        grid-row: 3 / 4;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxjavascript {
-        grid-column: first / second;
-        grid-row: 4 / 5;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxphp {
-        grid-column: first / second;
-        grid-row: 5 / 6;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxpython {
-        grid-column: first / second;
-        grid-row: 6 / 7;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxgit {
-        grid-column: first / second;
-        grid-row: 7/ 8;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
-    .boxsqlite {
-        grid-column: first / second;
-        grid-row: 8 / 9;
-        border: 1px solid lightsalmon; 
-        padding: 1.96rem;
-    }
-    
+    grid-row: 1 / 2;
+  }
+
+  .boxcss {
+    grid-column: first / second;
+    grid-row: 2 / 3;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxhtml {
+    grid-column: first / second;
+    grid-row: 3 / 4;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxjavascript {
+    grid-column: first / second;
+    grid-row: 4 / 5;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxphp {
+    grid-column: first / second;
+    grid-row: 5 / 6;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxpython {
+    grid-column: first / second;
+    grid-row: 6 / 7;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxgit {
+    grid-column: first / second;
+    grid-row: 7/ 8;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
+  
+  .boxsqlite {
+    grid-column: first / second;
+    grid-row: 8 / 9;
+    border: 1px solid rgb(255, 160, 122);
+    padding: 1.96rem;
+  }
 }

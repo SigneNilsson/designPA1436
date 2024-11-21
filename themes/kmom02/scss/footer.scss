@@ -1,32 +1,35 @@
 .footer {
-/*     display: flex;
-    flex-direction: row; //horisontellt
-    justify-content: space-between; //flyter ut elementen åt sidorna.
-    align-items: center; //vertikalled */
-    background-color: lightpink;
-    padding: 2rem;
+  /*   display: flex;
+  flex-direction: row; //horisontellt
+  justify-content: space-between; //flyter ut elementen åt sidorna.
+  align-items: center; //vertikalled */
+  background-color: #ffb6c1;
+  padding: 2rem;
 
 
-    .social { 
-        grid-column:third / end;
-        grid-row: row1-start / row-end;
-        a {
-        text-decoration: none;
-        font-size: 3rem;
-        color: white;
-        }
-    }
-}
-.footertext {
-    grid-column: first / second;
+  .social { 
+    grid-column: third / end;
     grid-row: row1-start / row-end;
+  }
+
+  .social a {
+    text-decoration: none;
+    font-size: 3rem;
+    color: #fff;
+  }
 }
+
+.footertext {
+  grid-column: first / second;
+  grid-row: row1-start / row-end;
+}
+
 .footer {
-    grid-column: first / end;
-    grid-row: row3-start / row-end;
-    display: grid;
-    grid-template-columns: [first] 20% [second] auto [third] 15% [end];
-    grid-template-rows: [row1-start] auto [row-end];
+  grid-column: first / end;
+  grid-row: row3-start / row-end;
+  display: grid;
+  grid-template-columns: [first] 20% [second] auto [third] 15% [end];
+  grid-template-rows: [row1-start] auto [row-end];
 }
 
 //Kan klistra in stylen för social a i footer så att de endast kan användas där.
