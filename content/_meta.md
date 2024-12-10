@@ -8,4 +8,10 @@ Social:
     - title: Hem.
       url: https://www.student.bth.se/~sinl24/dbwebb-kurser/design/me/portfolio/
       icon: fas fa-home
+    - title: Dark Mode
+      url: ?action=theme
+      icon: fas fa-moon
+    - title: Destroy Session
+      url: ?action=session_destroy
+      icon: fas fa-trash-alt
 ---

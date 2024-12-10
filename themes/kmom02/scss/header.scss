@@ -1,11 +1,12 @@
 
 .header {
   /*   display: flex; */
-  background-color: #add8e6;
+  background-color: $headercolor;
   /*   flex-direction: row; //horisontellt */
   /*   justify-content: space-between; //flyter ut elementen åt sidorna.
   align-items: center; //vertikalled */
   padding: 2rem;
+  color: $background-alternative-color;
 }
 
 .header {
@@ -29,6 +30,7 @@
 
 .nav a {
   font-size: 2rem;
+  color: $background-alternative-color;
 
 }
 

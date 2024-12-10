@@ -1,0 +1,26 @@
+{% include 'incl/header.twig' %}
+
+<body>
+    {% include 'incl/nav.twig' %}
+
+    <div class="main" role="main">
+        <div class = "landing-page">
+            {{ content }}
+
+            {% for tech in meta.Sides %}
+                <a href="{{ base_url }}/analysis/{{ tech.class }}">
+                    <div>
+                        <h1>{{ tech.name }}</h1>
+                    </div>
+                </a>
+            {% endfor %}
+
+            {#{{ dump(meta) }} Såhär kan man dumpa innehållet på sidan#}
+
+        </div>
+    </div>
+    
+    {% include 'incl/footer.twig' %}
+</body>
+
+</html>

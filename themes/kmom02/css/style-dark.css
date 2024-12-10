@@ -6423,13 +6423,10 @@ template {
   display: none;
 }
 
-/* $accent-color: #ee6c4d;
-$background-color: #3d5a80;
-$background-alternative-color: #e0fbfc; */
 body {
   line-height: 1.4;
   font-family: "Montserrat", sans-serif;
-  color: black;
+  color: white;
 }
 
 p {
@@ -6472,7 +6469,7 @@ body {
   flex-direction: row; //horisontellt
   justify-content: space-between; //flyter ut elementen åt sidorna.
   align-items: center; //vertikalled */
-  background-color: #E6ACBB;
+  background-color: black;
   padding: 2rem;
 }
 .footer .social {
@@ -6795,13 +6792,13 @@ pre code {
   }
 }
 body {
-  background-color: green;
+  background-color: #3d5a80;
 }
 
 * {
-  color: blue;
+  color: white;
 }
 
 .main {
-  background-color: yellow;
+  background-color: brown;
 }
