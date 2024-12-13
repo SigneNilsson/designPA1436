@@ -19,6 +19,7 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'mobile-menu'; //gjort själv.. hoppas rätt.
 
 @import 'technology';
+@import 'gallery';
 
 body {
   background-color: $background-alternative-color;
@@ -35,3 +36,5 @@ body {
 code {
   color: $background-alternative-color;
 }
+
+

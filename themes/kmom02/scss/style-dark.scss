@@ -19,6 +19,7 @@ $fa-font-path: '../../shared/fontawesome/webfonts';
 @import 'mobile-menu'; //gjort själv.. hoppas rätt.
 
 @import 'technology';
+@import 'gallery';
 
 body {
   background-color: $background-color;
@@ -44,6 +45,8 @@ code {
 img {
   filter: hue-rotate(20deg);
 }
+
+
 
 
 
