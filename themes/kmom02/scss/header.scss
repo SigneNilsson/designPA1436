@@ -20,6 +20,11 @@
 .site-header {
   grid-column: first / second;
   grid-row: row1-start / row-end;
+  display: grid;
+  grid-template-columns: [first] 40% [second] 40% [end];
+  grid-template-rows: [row1-start] auto [row-end];
+
+
 }
 /* .site-header {
   display: flex;
@@ -35,24 +40,37 @@
 }
 
 .nav {
-  grid-column: second / end;
+  grid-column: third / end;
   grid-row: row1-start / row-end;
 }
 
 .title,
 .logo {
-  padding: 3em 3em 3em 0;
+  //padding: 2em 3em 2em 0;
   max-width: 200px;
 
   img {
     float: left;
+    opacity: 80%;
     width: 200px;
   }
 }
 
+.logo {
+  grid-column: first / second;
+}
+
 .title {
-  grid-column: second / third;
+  grid-column: second / end;
   grid-row: row1-start / row-end;
+  float: center;
+  border: 1px solid;
+  border-radius: 16px;
+  padding: 10px;
   float: right;
+  height: 80%;
 }
 /* */
+.hidden {
+  display: none !important;
+}

@@ -49,7 +49,7 @@ Här visas ett fantastiskt bildgalleri:
 
 En youtube-klassiker:
 <div class="embed-container">
-    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?si=ZaWcvUvK9bra1MmW" frameborder="0" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/jNQXAC9IVRw?si=ZaWcvUvK9bra1MmW" title="Youtube classic: me at the zoo" frameborder="0" allowfullscreen></iframe>
 </div>
 
 <!-- kan bestämma att vissa delar av bilden ska kapas när den blir mindre så att de t.ex. blir högra halvan bara. se cimage crop. -->

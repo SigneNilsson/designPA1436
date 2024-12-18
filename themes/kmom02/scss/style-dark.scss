@@ -34,7 +34,11 @@ body {
 }
 
 code {
-  color: $font-alternative-color;
+  color: #000;
+}
+
+strong {
+  color: #000;
 }
 
 .nav a,
@@ -45,6 +49,8 @@ code {
 img {
   filter: hue-rotate(20deg);
 }
+
+
 
 
 
